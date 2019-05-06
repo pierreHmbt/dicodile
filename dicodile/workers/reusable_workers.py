@@ -76,7 +76,7 @@ def _spawn_workers(n_jobs, hostfile=None):
     envstr = ''
     for key in ['TESTING_DICOD']:
         if key in os.environ:
-            envstr += f"{key}={os.environ[key]}\n"
+            envstr += "{key}={os.environ[key]}\n"
     if envstr != '':
         info.Set("env", envstr)
 
